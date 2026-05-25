@@ -1,0 +1,110 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import ServiceCard from '@components/ServiceCard.astro';
+import LeadMagnetBlock from '@components/LeadMagnetBlock.astro';
+import EarlyAccessBlock from '@components/EarlyAccessBlock.astro';
+import PrivacyNote from '@components/PrivacyNote.astro';
+import CTA from '@components/CTA.astro';
+import { industries, phaseTwoUseCases, primaryUseCases, services, site } from '@data/site';
+---
+<BaseLayout title="NeoTek Consulting | AI Automation That Makes Business Sense" description={site.polishedPositioning}>
+  <section class="hero">
+    <div class="container hero__grid">
+      <div>
+        <p class="eyebrow">Tacoma-based · North America remote</p>
+        <h1>AI Automation That Makes Business Sense</h1>
+        <p class="lede">{site.polishedPositioning}</p>
+        <div class="button-row">
+          <a class="button" href="/10-ai-automations/">Download the Free Guide</a>
+          <a class="button button--secondary" href="/early-access/">Join Early Access</a>
+        </div>
+        <ul class="badge-list" aria-label="Core automation examples">
+          {primaryUseCases.map((item) => <li>{item}</li>)}
+        </ul>
+      </div>
+      <div class="hero__visual">
+        <div class="hero-card">
+          <div class="hero-card__logo">
+            <img src="/assets/neotek-spark.svg" alt="NeoTek Spark logo" width="330" height="330" />
+          </div>
+          <h3>Specialized AI agents for real workflows.</h3>
+          <p class="muted">Start with a practical assessment, choose the right deployment model, and build automation around measurable business value.</p>
+          <div class="metric-row">
+            <div class="metric"><strong>$1,500</strong><span>Assessment</span></div>
+            <div class="metric"><strong>2 weeks</strong><span>Roadmap</span></div>
+            <div class="metric"><strong>10</strong><span>Launch spots</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container two-column">
+      <div>
+        <p class="eyebrow">What NeoTek does</p>
+        <h2>Make AI understandable, practical, and financially useful.</h2>
+        <p class="lede">NeoTek helps business owners identify repeatable work, choose the right AI Agent approach, and implement workflow automation without overwhelming the team.</p>
+      </div>
+      <div class="grid grid--2">
+        {primaryUseCases.map((item) => <div class="card"><h3>{item}</h3><p class="muted">A focused starting point for reducing repetitive work and improving customer response.</p></div>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft">
+    <div class="container grid grid--2">
+      <LeadMagnetBlock />
+      <EarlyAccessBlock />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow">Services</p>
+      <h2>Start broad, then build what matters.</h2>
+      <p class="lede">NeoTek begins with a business-first assessment, then helps plan and implement AI Agent workflows around your tools, people, privacy needs, and budget.</p>
+      <div class="grid grid--3" style="margin-top:2rem;">
+        {services.slice(0, 6).map((service) => <ServiceCard {...service} />)}
+      </div>
+      <div class="button-row">
+        <a class="button" href="/services/">See All Services</a>
+        <a class="button button--secondary" href="/assessment/">View Assessment</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft">
+    <div class="container two-column">
+      <div>
+        <p class="eyebrow">Priority industries</p>
+        <h2>Focused first on clinics and wellness, open to practical automation across local businesses.</h2>
+        <p class="lede">NeoTek will prioritize clinics and wellness practices first, while also serving professional services, nonprofits, trades, creative businesses, retail, hospitality, education, and faith-based organizations.</p>
+      </div>
+      <div class="card">
+        <ul class="check-list">
+          {industries.map((industry) => <li>{industry}</li>)}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container two-column">
+      <div>
+        <p class="eyebrow">Privacy and deployment</p>
+        <h2>Local, remote, containerized, or cloud-based AI Agent options.</h2>
+        <p class="lede">NeoTek evaluates local/private LLM options, containerized AI Agent deployments, and cloud-based AI Agent platform options based on cost, privacy, performance, support, and workflow requirements.</p>
+      </div>
+      <div class="card">
+        <PrivacyNote />
+        <h3 style="margin-top:1.5rem;">Phase 2 solution areas</h3>
+        <ul class="check-list">
+          {phaseTwoUseCases.map((item) => <li>{item}</li>)}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <CTA />
+</BaseLayout>

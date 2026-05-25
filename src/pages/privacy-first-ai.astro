@@ -1,0 +1,28 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import CTA from '@components/CTA.astro';
+import PrivacyNote from '@components/PrivacyNote.astro';
+---
+<BaseLayout title="Privacy-First AI" description="NeoTek Consulting designs AI automations with client-approved data access, human review, limited permissions, and local/private model options where appropriate.">
+  <section class="section">
+    <div class="container two-column">
+      <div>
+        <p class="eyebrow">Privacy-first AI</p>
+        <h1>Useful AI automation starts with clear boundaries.</h1>
+        <p class="lede">NeoTek helps define what an AI Agent can access, what must stay human-reviewed, where data should be stored, and which deployment model best fits the business.</p>
+      </div>
+      <div class="card"><PrivacyNote /></div>
+    </div>
+  </section>
+  <section class="section section--soft">
+    <div class="container grid grid--3">
+      <div class="card"><h3>Client-approved data access</h3><p class="muted">The client defines what systems, files, and information are in scope.</p></div>
+      <div class="card"><h3>Human review</h3><p class="muted">AI-generated communication and key decisions can remain subject to human review before action.</p></div>
+      <div class="card"><h3>Local/private model options</h3><p class="muted">Local or private LLM options can support privacy, cost control, and data ownership goals.</p></div>
+      <div class="card"><h3>Limited permissions</h3><p class="muted">Automation should use the smallest practical access scope for the workflow.</p></div>
+      <div class="card"><h3>Activity tracking</h3><p class="muted">Audit logs or activity tracking can be included where practical and appropriate.</p></div>
+      <div class="card"><h3>Written terms</h3><p class="muted">Data-handling expectations should be documented before implementation.</p></div>
+    </div>
+  </section>
+  <CTA />
+</BaseLayout>

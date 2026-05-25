@@ -1,0 +1,29 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import ServiceCard from '@components/ServiceCard.astro';
+import CTA from '@components/CTA.astro';
+import PrivacyNote from '@components/PrivacyNote.astro';
+import { services, site } from '@data/site';
+---
+<BaseLayout title="Services" description="AI readiness assessments, specialized AI agents, workflow automation, local/private LLM planning, and ongoing AI automation support from NeoTek Consulting.">
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow">Services</p>
+      <h1>AI agents and workflow automation for practical business outcomes.</h1>
+      <p class="lede">{site.polishedPositioning}</p>
+      <div class="grid grid--3" style="margin-top:2rem;">
+        {services.map((service) => <ServiceCard {...service} />)}
+      </div>
+    </div>
+  </section>
+  <section class="section section--soft">
+    <div class="container two-column">
+      <div>
+        <h2>Built around your deployment needs.</h2>
+        <p class="lede">NeoTek is platform-flexible and evaluates the right deployment model for each client: local, remote, containerized, managed, or cloud-based AI Agent platform options.</p>
+      </div>
+      <div class="card"><PrivacyNote /></div>
+    </div>
+  </section>
+  <CTA title="Find the right first automation opportunity" body="Start with a free call, then decide whether the AI Readiness & Automation Assessment is the right next step." />
+</BaseLayout>

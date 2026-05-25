@@ -1,0 +1,32 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import LeadMagnetBlock from '@components/LeadMagnetBlock.astro';
+import CTA from '@components/CTA.astro';
+import { automationsGuide, site } from '@data/site';
+---
+<BaseLayout title="10 AI Automations Every Local Business Should Consider" description="Download NeoTek Consulting's free guide to practical AI automations for local businesses.">
+  <section class="section">
+    <div class="container two-column">
+      <div>
+        <p class="eyebrow">Free guide</p>
+        <h1>10 AI Automations Every Local Business Should Consider</h1>
+        <p class="lede">AI does not have to be overwhelming. This guide shows practical ways businesses can use AI agents and workflow automation to improve daily operations, customer response, scheduling, communication, and internal processes.</p>
+        <div class="button-row">
+          <a class="button" href={site.leadMagnetUrl}>Get the Free Guide</a>
+          <a class="button button--secondary" href={site.bookingUrl}>Book Free Call</a>
+        </div>
+      </div>
+      <LeadMagnetBlock compact={true} />
+    </div>
+  </section>
+  <section class="section section--soft">
+    <div class="container">
+      <p class="eyebrow">What is inside</p>
+      <h2>Practical automation ideas, not hype.</h2>
+      <div class="grid grid--2 number-grid" style="margin-top:2rem;">
+        {automationsGuide.map((item) => <article class="card number-card"><h3>{item.title}</h3><p class="muted">{item.description}</p></article>)}
+      </div>
+    </div>
+  </section>
+  <CTA title="After you download the guide, book a feasibility call" body="Bring one repetitive workflow or customer-response issue. NeoTek will help identify whether AI automation is a realistic next step." />
+</BaseLayout>

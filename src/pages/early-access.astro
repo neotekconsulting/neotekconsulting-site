@@ -1,0 +1,47 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import EarlyAccessBlock from '@components/EarlyAccessBlock.astro';
+import CTA from '@components/CTA.astro';
+import { site } from '@data/site';
+---
+<BaseLayout title="NeoTek AI Early Access Program" description="Reserve priority scheduling and early access to NeoTek AI automation services with a $200 Early Access Reservation Credit.">
+  <section class="section">
+    <div class="container two-column">
+      <div>
+        <p class="eyebrow">Early Access</p>
+        <h1>NeoTek AI Early Access Program</h1>
+        <p class="lede">10 launch spots are available for businesses that want priority access to practical AI Agent and workflow automation planning.</p>
+        <p class="lede">Additional applicants will be placed into the next available spots.</p>
+      </div>
+      <EarlyAccessBlock />
+    </div>
+  </section>
+  <section class="section section--soft">
+    <div class="container grid grid--3">
+      <div class="card"><h3>1. Download the guide</h3><p class="muted">Start with 10 practical automation ideas for local businesses.</p></div>
+      <div class="card"><h3>2. Reserve your place</h3><p class="muted">Use the $200 Early Access Reservation Credit to secure priority scheduling and early access.</p></div>
+      <div class="card"><h3>3. Book the call</h3><p class="muted">Discuss what is feasible and where NeoTek can help.</p></div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container two-column">
+      <div>
+        <p class="eyebrow">Terms summary</p>
+        <h2>Simple reservation-credit terms.</h2>
+        <p class="lede">The reservation credit applies toward any NeoTek service, is refundable within 30 days, and expires after 6 months.</p>
+      </div>
+      <div class="card">
+        <ul class="check-list">
+          <li>Payment options: Venmo, Square, or PayPal</li>
+          <li>Credit can apply to the assessment, pilot project, or approved support work</li>
+          <li>Full terms should be reviewed on the reservation-credit terms page</li>
+        </ul>
+        <div class="button-row">
+          <a class="button" href={site.squareUrl}>Reserve with Square</a>
+          <a class="button button--secondary" href="/reservation-credit-terms/">Read Terms</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <CTA title="Ready to talk through a possible project?" />
+</BaseLayout>

@@ -1,0 +1,37 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import { serviceAreas, site } from '@data/site';
+---
+<BaseLayout title="Contact" description="Contact NeoTek Consulting to book a Free AI Automation Feasibility Call.">
+  <section class="section">
+    <div class="container two-column">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h1>Book a Free AI Automation Feasibility Call.</h1>
+        <p class="lede">Talk through your workflows, repetitive tasks, and possible AI automation opportunities in up to 30 minutes.</p>
+        <div class="button-row">
+          <a class="button" href={site.bookingUrl}>Book Free Call</a>
+          <a class="button button--secondary" href={`mailto:${site.email}`}>Email NeoTek</a>
+        </div>
+      </div>
+      <div class="card">
+        <h2>NeoTek Consulting</h2>
+        <p><strong>Phone:</strong> <a href={`tel:${site.phone.replace(/[^0-9]/g, '')}`}>{site.phone}</a></p>
+        <p><strong>Email:</strong> <a href={`mailto:${site.email}`}>{site.email}</a></p>
+        <p><strong>Hours:</strong> {site.hours}</p>
+        <p><strong>Feasibility calls:</strong> {site.callAvailability}; special requests available outside those hours.</p>
+        <p><strong>Meeting preference:</strong> Zoom, then Google Meet, Microsoft Teams, or phone.</p>
+        <p class="muted">{site.responsePromise}</p>
+      </div>
+    </div>
+  </section>
+  <section class="section section--soft">
+    <div class="container">
+      <p class="eyebrow">Service area</p>
+      <h2>{site.serviceArea}</h2>
+      <ul class="badge-list">
+        {serviceAreas.map((area) => <li>{area}</li>)}
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

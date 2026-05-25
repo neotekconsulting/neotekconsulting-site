@@ -1,0 +1,16 @@
+---
+import { navItems, site } from '@data/site';
+---
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="logo-lockup" href="/" aria-label="NeoTek Consulting home">
+      <img src="/assets/neotek-spark.svg" alt="" width="42" height="42" />
+      <span class="logo-text">NeoTek <span>Consulting</span></span>
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
+    </nav>
+    <a class="button" href={site.bookingUrl}>Book Free Call</a>
+    <span class="mobile-nav-note">Menu coming soon</span>
+  </div>
+</header>

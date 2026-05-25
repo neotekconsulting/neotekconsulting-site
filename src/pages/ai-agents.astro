@@ -1,0 +1,45 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import CTA from '@components/CTA.astro';
+import PrivacyNote from '@components/PrivacyNote.astro';
+import { primaryUseCases, phaseTwoUseCases, site } from '@data/site';
+---
+<BaseLayout title="AI Agents & Workflow Automation" description="Learn how specialized AI agents can support intake, scheduling, email triage, phone workflows, meeting notes, document review, and internal knowledge lookup.">
+  <section class="section">
+    <div class="container two-column">
+      <div>
+        <p class="eyebrow">AI Agents</p>
+        <h1>AI agents are not just chatbots.</h1>
+        <p class="lede">A well-designed AI agent can help with repeatable business workflows like intake, scheduling, email triage, phone follow-up, meeting notes, document review, and internal knowledge lookup.</p>
+        <div class="button-row">
+          <a class="button" href={site.bookingUrl}>Book Free Call</a>
+          <a class="button button--secondary" href="/10-ai-automations/">Download Guide</a>
+        </div>
+      </div>
+      <div class="card card--dark">
+        <h2>Workflow first. Platform second.</h2>
+        <p>NeoTek designs the workflow, data boundaries, and human-review steps first. Then we evaluate the right AI Agent platform and deployment model for the client.</p>
+      </div>
+    </div>
+  </section>
+  <section class="section section--soft">
+    <div class="container">
+      <p class="eyebrow">Launch solution areas</p>
+      <h2>Practical places to start.</h2>
+      <div class="grid grid--2" style="margin-top:2rem;">
+        {[...primaryUseCases, ...phaseTwoUseCases].map((item) => <div class="card"><h3>{item}</h3><p class="muted">A focused AI Agent workflow that can be scoped, tested, and improved around measurable business value.</p></div>)}
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container two-column">
+      <div>
+        <p class="eyebrow">How we build</p>
+        <h2>Flexible AI Agent deployments.</h2>
+        <p class="lede">NeoTek can evaluate local/private LLM options, containerized deployments, remote servers, client-owned hardware, managed environments, and cloud-based AI Agent platform options as they become commercially viable.</p>
+      </div>
+      <div class="card"><PrivacyNote /></div>
+    </div>
+  </section>
+  <CTA />
+</BaseLayout>

@@ -1,0 +1,20 @@
+---
+import { site } from '@data/site';
+export interface Props {
+  compact?: boolean;
+}
+const { compact = false } = Astro.props;
+---
+<div class="card">
+  <p class="eyebrow">Free guide</p>
+  <h2>{compact ? '10 AI Automations' : '10 AI Automations Every Local Business Should Consider'}</h2>
+  <p class="muted">A practical guide to saving time, reducing manual work, and finding the right first AI automation project.</p>
+  <div class="form-embed-placeholder" aria-label="MailerLite placeholder">
+    <strong>MailerLite signup placeholder</strong>
+    <p class="muted">Replace this block with your MailerLite embed code or link this button to your MailerLite landing page.</p>
+    <div class="form-row">
+      <input class="input" type="email" placeholder="Email address" aria-label="Email address" disabled />
+      <a class="button" href={site.leadMagnetUrl}>Get the Free Guide</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+---
+import { navItems, site } from '@data/site';
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="logo-lockup" href="/" aria-label="NeoTek Consulting home">
+          <img src="/assets/neotek-spark.svg" alt="" width="42" height="42" />
+          <span class="logo-text">NeoTek <span>Consulting</span></span>
+        </a>
+        <p style="margin-top:1rem;max-width:32rem;">{site.polishedPositioning}</p>
+        <p>{site.serviceArea}</p>
+      </div>
+      <div>
+        <strong>Explore</strong>
+        <ul class="footer-list">
+          {navItems.slice(0, 5).map((item) => <li><a href={item.href}>{item.label}</a></li>)}
+        </ul>
+      </div>
+      <div>
+        <strong>Offers</strong>
+        <ul class="footer-list">
+          <li><a href="/10-ai-automations/">Free AI Guide</a></li>
+          <li><a href="/early-access/">Early Access</a></li>
+          <li><a href="/assessment/">Assessment</a></li>
+          <li><a href="/privacy-first-ai/">Privacy-First AI</a></li>
+        </ul>
+      </div>
+      <div>
+        <strong>Contact</strong>
+        <ul class="footer-list">
+          <li><a href={`tel:${site.phone.replace(/[^0-9]/g, '')}`}>{site.phone}</a></li>
+          <li><a href={`mailto:${site.email}`}>{site.email}</a></li>
+          <li>{site.hours}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© {year} {site.legalName}. All rights reserved.</span>
+      <span><a href="/privacy-policy/">Privacy Policy</a> · <a href="/terms/">Terms</a> · <a href="/reservation-credit-terms/">Reservation Credit Terms</a></span>
+    </div>
+  </div>
+</footer>

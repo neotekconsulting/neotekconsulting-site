@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="160" viewBox="0 0 820 160" role="img" aria-label="NeoTek Consulting wordmark">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap');
+    .brand { font-family: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif; font-weight: 600; font-size: 92px; letter-spacing: -0.4px; fill: #0A0A0A; }
+    .descriptor { font-family: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif; font-weight: 400; font-size: 36px; letter-spacing: 0.7px; fill: #0A0A0A; opacity: .9; }
+  </style>
+  <text class="brand" x="0" y="97">NeoTek</text>
+  <text class="descriptor" x="378" y="97">Consulting</text>
+</svg>

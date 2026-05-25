@@ -1,0 +1,54 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import CTA from '@components/CTA.astro';
+import { assessmentIncludes, site } from '@data/site';
+---
+<BaseLayout title="AI Readiness & Automation Assessment" description="A two-week AI readiness and automation assessment for businesses that want a practical roadmap before implementing AI agents or workflow automation.">
+  <section class="section">
+    <div class="container two-column">
+      <div>
+        <p class="eyebrow">Paid assessment</p>
+        <h1>AI Readiness & Automation Assessment</h1>
+        <p class="lede">A two-week assessment that reviews your workflows, current tools, pain points, privacy considerations, and implementation options.</p>
+        <div class="button-row">
+          <a class="button" href={site.bookingUrl}>Book Free Call First</a>
+          <a class="button button--secondary" href="/early-access/">Join Early Access</a>
+        </div>
+      </div>
+      <div class="card">
+        <p class="kicker">Starting point</p>
+        <div class="price">$1,500</div>
+        <p class="muted"><strong>Timeline:</strong> 2 weeks from kickoff to final report.</p>
+        <p class="muted"><strong>Format:</strong> Client preference based on location. Local Puget Sound clients can meet in person when useful; remote clients can complete the process online.</p>
+      </div>
+    </div>
+  </section>
+  <section class="section section--soft">
+    <div class="container">
+      <p class="eyebrow">What is included</p>
+      <h2>A roadmap before implementation.</h2>
+      <div class="grid grid--3" style="margin-top:2rem;">
+        {assessmentIncludes.map((item) => <div class="card"><h3>{item}</h3><p class="muted">A practical step toward identifying the right automation opportunity and avoiding costly wrong turns.</p></div>)}
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container two-column">
+      <div>
+        <p class="eyebrow">After the assessment</p>
+        <h2>Monthly AI Automation Support</h2>
+        <p class="lede">After the client approves the implementation plan, ongoing support is available for <strong>$500/month</strong>.</p>
+      </div>
+      <div class="card">
+        <ul class="check-list">
+          <li>Monthly check-in</li>
+          <li>Prioritized small-request queue</li>
+          <li>Workflow tweaks, prompt adjustments, and configuration changes</li>
+          <li>Preferred client pricing for larger implementation work, quoted case-by-case</li>
+          <li>Can be paused at any time</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <CTA />
+</BaseLayout>

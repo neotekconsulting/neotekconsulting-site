@@ -1,0 +1,23 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import { site } from '@data/site';
+---
+<BaseLayout title="Terms" description="NeoTek Consulting website terms." noindex={true}>
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow">Legal</p>
+      <h1>Terms</h1>
+      <p class="lede">These are starter website terms and should be reviewed by qualified counsel before launch.</p>
+      <div class="card">
+        <h2>Website use</h2>
+        <p>This website provides general information about NeoTek Consulting services. It does not create a client relationship or guarantee that any particular automation, technology, or AI solution is suitable for your business.</p>
+        <h2>No legal or compliance advice</h2>
+        <p>NeoTek may help define privacy-conscious automation boundaries for workflows involving regulated or personally identifiable information, but NeoTek does not provide legal, regulatory, medical, financial, or compliance advice.</p>
+        <h2>Services</h2>
+        <p>Services are governed by separate written agreements, statements of work, invoices, or project terms.</p>
+        <h2>Contact</h2>
+        <p>Questions can be sent to <a href={`mailto:${site.email}`}>{site.email}</a>.</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
