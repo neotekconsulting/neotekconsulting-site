@@ -1,0 +1,20 @@
+# dependencies
+node_modules/
+
+# build output
+dist/
+
+# astro generated
+.astro/
+
+# IDE
+.vs/
+.vscode/
+
+# environment variables
+.env
+.env.*
+
+# OS
+Thumbs.db
+.DS_Store
