@@ -180,3 +180,13 @@ After the repository is in GitHub, add the FTPS secrets above, then re-run the w
 - The starter legal pages should be reviewed by qualified counsel before launch.
 - The site is brand-first. Public language uses AI Agents and workflow automation rather than platform-specific agent framework names.
 - Hermes Agent can be referenced later on technical/proposal pages if you decide to lead with that implementation stack.
+
+
+**New repository secrets**
+
+| Name                    | Value                                    |
+| ----------------------- | ---------------------------------------- |
+| `BLUEHOST_FTP_HOST`     | Your Bluehost server hostname            |
+| `BLUEHOST_FTP_USERNAME` | Your cPanel/FTP username                 |
+| `BLUEHOST_FTP_PASSWORD` | Your cPanel/FTP password                 |
+| `BLUEHOST_REMOTE_DIR`   | e.g. `/public_html/` (must end with `/`) |
