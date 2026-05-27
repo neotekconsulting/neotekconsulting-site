@@ -5,7 +5,7 @@ import LeadMagnetBlock from '@components/LeadMagnetBlock.astro';
 import EarlyAccessBlock from '@components/EarlyAccessBlock.astro';
 import PrivacyNote from '@components/PrivacyNote.astro';
 import CTA from '@components/CTA.astro';
-import { industries, phaseTwoUseCases, primaryUseCases, services, site } from '@data/site';
+import { automationsGuide, industries, phaseTwoUseCases, primaryUseCases, services, site } from '@data/site';
 ---
 <BaseLayout title="NeoTek Consulting | AI Automation That Makes Business Sense" description={site.polishedPositioning}>
   <section class="hero">
@@ -47,7 +47,7 @@ import { industries, phaseTwoUseCases, primaryUseCases, services, site } from '@
         <p class="lede">NeoTek helps business owners identify repeatable work, choose the right AI Agent approach, and implement workflow automation without overwhelming the team.</p>
       </div>
       <div class="grid grid--2">
-        {primaryUseCases.map((item) => <div class="card"><h3>{item}</h3><p class="muted">A focused starting point for reducing repetitive work and improving customer response.</p></div>)}
+        {automationsGuide.slice(0, 4).map((item) => <div class="card"><h3>{item.title}</h3><p class="muted">{item.description}</p></div>)}
       </div>
     </div>
   </section>
