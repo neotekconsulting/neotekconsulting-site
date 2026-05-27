@@ -16,8 +16,8 @@ export const site = {
     'NeoTek helps businesses use specialized AI agents and workflow automation to save time, save money, reduce manual work, and modernize operations.',
   polishedPositioning:
     'NeoTek Consulting helps businesses use specialized AI agents and workflow automation to save time, reduce costs, eliminate repetitive work, and modernize operations.',
-  bookingUrl: '#replace-with-google-calendar-booking-link',
-  leadMagnetUrl: '#replace-with-mailerlite-lead-magnet-url',
+  bookingUrl: 'https://calendar.app.google/qjUhQ3X3ndwUZszk9',
+  leadMagnetUrl: 'https://preview.mailerlite.io/forms/2382745/188577829904975284/share',
   venmoUrl: '#replace-with-venmo-link',
   squareUrl: '#replace-with-square-payment-link',
   paypalUrl: '#replace-with-paypal-link',
@@ -94,17 +94,18 @@ export const assessmentIncludes = [
 
 export const services = [
   {
-    title: 'AI Readiness & Automation Assessment',
-    price: '$1,500',
-    description:
-      'A two-week assessment that reviews your workflows, current tools, pain points, automation opportunities, privacy considerations, and implementation options. Includes a written roadmap, recommended phases, and a follow-up review call.'
-  },
-  {
     title: 'Free AI Automation Feasibility Call',
     price: 'Free',
     description:
       'A call of up to 30 minutes to discuss your business workflows, repetitive tasks, AI automation opportunities, and whether NeoTek may be a good fit.'
   },
+  {
+    title: 'AI Readiness & Automation Assessment',
+    price: '$1,500',
+    description:
+      'A two-week assessment that reviews your workflows, current tools, pain points, automation opportunities, privacy considerations, and implementation options. Includes a written roadmap, recommended phases, and a follow-up review call.'
+  },
+  
   {
     title: 'AI Agent Workflow Automation',
     description:
