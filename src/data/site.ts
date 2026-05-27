@@ -18,11 +18,11 @@ export const site = {
     'NeoTek Consulting helps businesses use specialized AI agents and workflow automation to save time, reduce costs, eliminate repetitive work, and modernize operations.',
   bookingUrl: 'https://calendar.app.google/qjUhQ3X3ndwUZszk9',
   leadMagnetUrl: 'https://preview.mailerlite.io/forms/2382745/188577829904975284/share',
-  venmoUrl: '#replace-with-venmo-link',
-  squareUrl: '#replace-with-square-payment-link',
-  paypalUrl: '#replace-with-paypal-link',
+  venmoUrl: 'https://venmo.com/u/NeoTekConsulting',
+  squareUrl: 'https://square.link/u/DHWMe6AT',
+  paypalUrl: 'https://paypal.me/NeoTekConsulting?country.x=US&locale.x=en_US',  
   social: {
-    facebook: '#replace-with-facebook-page',
+    facebook: 'https://www.facebook.com/profile.php?id=61590418801909',
     googleProfile: '#replace-with-google-business-profile'
   }
 } as const;
