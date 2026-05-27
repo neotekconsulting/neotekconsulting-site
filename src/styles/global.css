@@ -354,8 +354,124 @@ ol {
   color: var(--green);
 }
 
-.mobile-nav-note {
+.mobile-menu-toggle {
   display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.hamburger-icon,
+.hamburger-icon::before,
+.hamburger-icon::after {
+  display: block;
+  width: 22px;
+  height: 2.5px;
+  border-radius: 2px;
+  background: var(--ink);
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+
+.hamburger-icon {
+  position: relative;
+}
+
+.hamburger-icon::before,
+.hamburger-icon::after {
+  content: '';
+  position: absolute;
+  left: 0;
+}
+
+.hamburger-icon::before {
+  top: -7px;
+}
+
+.hamburger-icon::after {
+  top: 7px;
+}
+
+.mobile-menu-toggle[aria-expanded="true"] .hamburger-icon {
+  background: transparent;
+}
+
+.mobile-menu-toggle[aria-expanded="true"] .hamburger-icon::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.mobile-menu-toggle[aria-expanded="true"] .hamburger-icon::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.mobile-menu-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 19;
+  background: rgba(12, 44, 86, 0.4);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.mobile-menu-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 76px;
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1.25rem 1.5rem 1.75rem;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 12px 32px rgba(12, 44, 86, 0.12);
+  transform: translateY(-0.75rem);
+  opacity: 0;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.mobile-menu-overlay.is-open .mobile-menu {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.mobile-menu a:not(.button) {
+  display: block;
+  padding: 0.75rem 0.5rem;
+  color: var(--ink);
+  font-size: 1.05rem;
+  font-weight: 750;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.mobile-menu a:not(.button):hover {
+  background: var(--soft);
+  color: var(--green);
+}
+
+.mobile-menu .button {
+  margin-top: 0.75rem;
+  text-align: center;
+}
+
+body.no-scroll {
+  overflow: hidden;
 }
 
 .hero {
@@ -535,15 +651,13 @@ ol {
     grid-template-columns: 1fr;
   }
 
-  .nav {
+  .nav,
+  .header-cta {
     display: none;
   }
 
-  .mobile-nav-note {
-    display: block;
-    color: var(--muted);
-    font-size: 0.82rem;
-    font-weight: 700;
+  .mobile-menu-toggle {
+    display: flex;
   }
 
   .hero-card__logo {

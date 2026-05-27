@@ -10,7 +10,37 @@ import { navItems, site } from '@data/site';
     <nav class="nav" aria-label="Main navigation">
       {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
     </nav>
-    <a class="button" href={site.bookingUrl}>Book Free Call</a>
-    <span class="mobile-nav-note">Menu coming soon</span>
+    <a class="button header-cta" href={site.bookingUrl}>Book Free Call</a>
+    <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+      <span class="hamburger-icon"></span>
+    </button>
   </div>
 </header>
+
+<div class="mobile-menu-overlay" aria-hidden="true">
+  <nav class="mobile-menu" aria-label="Mobile navigation">
+    {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
+    <a class="button" href={site.bookingUrl}>Book Free Call</a>
+  </nav>
+</div>
+
+<script>
+  const toggle = document.querySelector('.mobile-menu-toggle');
+  const overlay = document.querySelector('.mobile-menu-overlay');
+
+  toggle?.addEventListener('click', () => {
+    const isOpen = overlay?.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+    overlay?.setAttribute('aria-hidden', String(!isOpen));
+    document.body.classList.toggle('no-scroll', isOpen);
+  });
+
+  overlay?.addEventListener('click', (e) => {
+    if (e.target === overlay || (e.target as HTMLElement).closest('.mobile-menu a')) {
+      overlay.classList.remove('is-open');
+      toggle?.setAttribute('aria-expanded', 'false');
+      overlay.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('no-scroll');
+    }
+  });
+</script>
