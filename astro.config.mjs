@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config';
 
 export default defineConfig({
   site: 'https://neotekconsulting.com',
-  base: '/neotekconsulting-site/',
+  base: '/',
   trailingSlash: 'always',
   build: {
     format: 'directory'
