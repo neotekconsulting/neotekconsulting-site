@@ -60,8 +60,8 @@ npm run preview
 Edit `src/data/site.ts` and replace these values:
 
 ```ts
-bookingUrl: '#replace-with-google-calendar-booking-link',
-leadMagnetUrl: '#replace-with-mailerlite-lead-magnet-url',
+X bookingUrl: '#replace-with-google-calendar-booking-link',
+X leadMagnetUrl: '#replace-with-mailerlite-lead-magnet-url',
 venmoUrl: '#replace-with-venmo-link',
 squareUrl: '#replace-with-square-payment-link',
 paypalUrl: '#replace-with-paypal-link'
