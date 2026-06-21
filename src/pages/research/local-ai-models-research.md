@@ -4,6 +4,9 @@ title: "Local AI Models Research"
 description: "A living research summary of local AI and LLM model sources, with emphasis on agentic-optimized models and local-first deployment."
 ---
 
+<section class="section">
+  <div class="container">
+
 # Local AI Models Research Report
 
 Sources: hermesguide.xyz, vLLM docs/supported_models, Ollama library, additional local model hubs, and 2025–2026 agentic-LLM research. Focus: local-first, with emphasis on agentic-optimized models.
@@ -167,3 +170,6 @@ These appear consistently across Ollama, vLLM-compatible families, LM Studio, an
 
 Report generated: 2026-06-21
 Focus: local and agentic-optimized models, with a path to broaden to all agentic-capable models next.
+
+  </div>
+</section>

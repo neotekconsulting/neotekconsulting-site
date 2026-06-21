@@ -4,6 +4,9 @@ title: "AI & LLM Glossary for Beginners"
 description: "A beginner-friendly glossary of AI terms and acronyms, written for middle-school clarity. A living document that will grow over time."
 ---
 
+<section class="section">
+  <div class="container">
+
 # AI & LLM Glossary for Beginners
 
 A living dictionary of terms and acronyms for people new to AI and large language models. Written for middle-school clarity, but useful for anyone building a mental model of the space.
@@ -163,3 +166,6 @@ When a model confidently says something that isn't true. It's not lying on purpo
 ---
 
 *Start here, then add as you learn. Every expert was once a beginner.*
+
+  </div>
+</section>
