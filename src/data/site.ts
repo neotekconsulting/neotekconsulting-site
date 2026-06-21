@@ -48,6 +48,7 @@ export const serviceAreas = [
 
 export const navItems = [
   { label: 'Services', href: '/services/' },
+  { label: 'Research', href: '/research/' },
   { label: 'Assessment', href: '/assessment/' },
   { label: 'AI Agents', href: '/ai-agents/' },
   { label: 'Early Access', href: '/early-access/' },
